@@ -4,20 +4,21 @@ import org.junit.Assert;
 
 public class MaximumTest {
     @Test
-    public void intMax() {
-        int actualValue = Maximum.testMaximum(9, 4, 1);
-        Assert.assertEquals(9, actualValue);
+    public void checkmaximum1() {
+        int max = Maximum.getmaximum(9, 4, 1);
+        Assert.assertEquals(9, max);
     }
 
     @Test
-    public void floatMax() {
-        float actualValue = Maximum.testMaximum(1.5f,9.1f,4.4f);
-        Assert.assertEquals(9.1f,actualValue,0);
+    public void checkmaximum2() {
+        int max = Maximum.getmaximum(1, 9, 4);
+        Assert.assertEquals(9, max);
     }
 
     @Test
-    public void stringMax() {
-        String actualValue = Maximum.testMaximum("apple","peach","banana");
-        Assert.assertEquals("peach",actualValue);
+    public void checkmaximum3() {
+        int max = Maximum.getmaximum(1, 4, 9);
+        Assert.assertEquals(9, max);
     }
+
 }
